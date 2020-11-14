@@ -46,7 +46,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (newState !== state) {
             if (newState === "big") {
+                console.log('resize')
+                const beforeImg = document.createElement('img')
+                beforeImg.src = 'img/top_media-before.svg'
+                const width = document.querySelector('.top_media').style.width;
+                const height = document.querySelector('.top_media').style.height;
+                console.log(width, height)
+                beforeImg.style.position = "absolute";
+                if (innerWidth < 1800) {
+                    beforeImg.style.top = '32px'
+                    beforeImg.style.width = '1271px'
 
+                } else {
+                    beforeImg.style.width = width;
+                    beforeImg.style.height = height;
+                    beforeImg.style.top = 0;
+                }
+                document.addEventListener('resize', () => {
+                    console.log('resize')
+                    if (innerWidth < 1800) {
+                        beforeImg.style.top = '32px'
+                        beforeImg.style.width = '1271px'
+    
+                    } else {
+                        beforeImg.style.width = width;
+                        beforeImg.style.height = height;
+                        beforeImg.style.top = 0;
+                    }
+                })
+
+
+                var tl = new gsap.timeline();
+                const mediaImg = document.querySelector('.top_media')
+                console.log(tl)
+                mediaImg.style.height = '100%'
+                tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 1}, 2)
+                // beforeImg.className = 'img-fluid'
+                document.querySelector('.primary__media--wrap').appendChild(beforeImg)
 
                 document.querySelector('.line-05').style.height = 0;
                 document.querySelector('.line-05').style.width = 0;

@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
 
                 document.querySelector('.line-05').style.height = 0;
+                document.querySelector('.line-04').style.height = 0;
                 document.querySelector('.line-05').style.width = 0;
                 document.querySelector('.line-02').style.height = 0;
                 document.querySelector('.line-02').style.width = 0;
@@ -123,6 +124,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.line-30').style.width = 0;
                 document.querySelector('.line-31').style.width = 0;
                 document.querySelector('.line-32').style.height = 0;
+
+                document.querySelector('.line-24').style.height = 0;
+                document.querySelector('.line-26').style.height = 0;
                 gsap.to(CSSRulePlugin.getRule('.line-10::after'), {width: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-10::after'), {height: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-10::before'), {width: 0, duration: 0})
@@ -152,6 +156,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 gsap.to(CSSRulePlugin.getRule('.line-33::after'), {width: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-33::after'), {height: 0, duration: 0})
+
+                gsap.to(CSSRulePlugin.getRule('.line-23::after'), {height: 0, duration: 0})
+                gsap.to(CSSRulePlugin.getRule('.line-23::after'), {width: 0, duration: 0})
+
+                gsap.to(CSSRulePlugin.getRule('.line-25::after'), {width: 0, duration: 0})
+                gsap.to(CSSRulePlugin.getRule('.line-25::after'), {height: 0, duration: 0})
+
+                gsap.to(CSSRulePlugin.getRule('.line-27:before'), {width: 0, duration: 0})
+                gsap.to(CSSRulePlugin.getRule('.line-27:before'), {height: 0, duration: 0})
+
+                gsap.to(CSSRulePlugin.getRule('.line-27:after'), {height: 0, duration: 0})
+                gsap.to(CSSRulePlugin.getRule('.line-27:after'), {width: 0, duration: 0})
 
 
                 gsap.to('.page', {opacity: 1, duration: 1})
@@ -207,20 +223,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.from('.build__text', {scrollTrigger:'.build__content', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)"})
                 gsap.from('.enterprise__header', {scrollTrigger:'.enterprise__text', y: 45, duration: 1, ease: "slow(0.7, 0.7, false)"})
                 gsap.from('.enterprise__text', {scrollTrigger:'.enterprise__text', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)", onComplete: () => {
-                    gsap.to('.line-23', {height: '380px', duration: 1, ease: 'slow(0.7, 0.7, false', onComplete: () => {
-                        gsap.to('.line-24', {width: '667px', duration: 1})
-                        gsap.to(CSSRulePlugin.getRule('.line-24::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+                    gsap.to(CSSRulePlugin.getRule('.line-23::after'), {height: '7px', width: '7px', duration: 0.5, onComplete: () => {
+                        gsap.to('.line-23', {height: '380px', duration: 1, ease: 'slow(0.7, 0.7, false', onComplete: () => {
+                            gsap.to('.line-24', {width: '667px', height: '10px', duration: 1})
+                            gsap.to(CSSRulePlugin.getRule('.line-24::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+                        }})
                     }})
-    
-                    gsap.to('.line-25', {height: '740px', duration: 1.5, ease: 'slow(0.7, 0.7, false', onComplete: () => {
-                        gsap.to('.line-26', {width: '75px', duration: 1})
-                        gsap.to(CSSRulePlugin.getRule('.line-26::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+
+                    gsap.to(CSSRulePlugin.getRule('.line-25::after'), {height: '7px', width: '7px', duration: 0.5, onComplete: () => {
+                        gsap.to('.line-25', {height: '740px', duration: 1.5, ease: 'slow(0.7, 0.7, false', onComplete: () => {
+                            gsap.to('.line-26', {width: '75px', height: '10px', duration: 1})
+                            gsap.to(CSSRulePlugin.getRule('.line-26::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+                        }})
                     }})
-    
-                    gsap.to('.line-27', {height: '1189px', duration: 3, ease: 'slow(0.7, 0.7, false', onComplete: () => {
-                        gsap.to('.line-27', {width: '40px', duration: 1})
-                        gsap.to(CSSRulePlugin.getRule('.line-27::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+
+                    gsap.to(CSSRulePlugin.getRule('.line-27::before'), {height: '7px', width: '7px', duration: 0.5, onComplete: () => {
+                        gsap.to('.line-27', {height: '1189px', duration: 3, ease: 'slow(0.7, 0.7, false', onComplete: () => {
+                            gsap.to('.line-27', {width: '40px', duration: 1})
+                            gsap.to(CSSRulePlugin.getRule('.line-27::after'), {height: '7px', width: '7px', duration: 0, ease: 'slow(0.7, 0.7, false)'})
+                        }})
                     }})
+
                 }})
                 gsap.from('.reach__header', {scrollTrigger:'.reach__content', y: 45, duration: 1, ease: "slow(0.7, 0.7, false)"})
                 gsap.from('.reach__text', {scrollTrigger:'.reach__content', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)"})
@@ -301,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
 
 
-                gsap.fromTo('.line-04', {width: '0'}, {width: '1296px', duration: 2, ease: 'slow(0.7, 0.7, false', scrollTrigger: '.technologies__bottom--title', onComplete: line4})
+                gsap.fromTo('.line-04', {width: '0'}, {width: '1296px', duration: 2, ease: 'slow(0.7, 0.7, false', scrollTrigger: '.technologies__bottom--title', onComplete: line5})
 
                 gsap.to('.line-02', {width: '627px', duration: 1, ease: 'slow(0.7, 0.7, false', scrollTrigger: '.solution__text', onComplete: line2})
 
@@ -367,13 +390,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    function line4 () {
-        gsap.to('.line-04', {height: '15px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: line5})
+    // function line4 () {
+    //     gsap.to('.line-04', {height: '15px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: line5})
 
-    }
+    // }
 
     function line5 () {
-        gsap.to('.line-05', {height: '175px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: () => {gsap.to('.line-05', {width: '15px', duration: 0.5,  ease: 'slow(0.7, 0.7, false)'})}})
+        gsap.to('.line-05', {height: '175px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: () => {gsap.to('.line-05', {width: '15px', duration: 0.5,  ease: 'slow(0.7, 0.7, false)'})
+        gsap.to('.line-04', {height: '15px', duration: .5, ease: 'slow(0.7, 0.7, false)'})
+    }})
         gsap.to(CSSRulePlugin.getRule('.line-05::after'), {width: '7px', height: '7px'})
     }
 

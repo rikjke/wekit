@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (newState !== state) {
             if (newState === "big") {
-                console.log('resize')
+
                 const beforeImg = document.createElement('img')
                 beforeImg.src = 'img/top_media-before.svg'
-                const width = document.querySelector('.top_media').style.width;
-                const height = document.querySelector('.top_media').style.height;
+                var width = document.querySelector('.top_media').style.width;
+                var height = document.querySelector('.top_media').style.height;
                 console.log(width, height)
                 beforeImg.style.position = "absolute";
                 if (innerWidth < 1800) {
@@ -62,12 +62,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     beforeImg.style.height = height;
                     beforeImg.style.top = 0;
                 }
-                document.addEventListener('resize', () => {
+                window.addEventListener('resize', () => {
                     console.log('resize')
-                    if (innerWidth < 1800) {
+                    if (innerWidth < 1800 && innerWidth >= 1230) {
                         beforeImg.style.top = '32px'
                         beforeImg.style.width = '1271px'
     
+                    } else if (innerWidth < 1230) {
+                        beforeImg.style.display = 'none'
                     } else {
                         beforeImg.style.width = width;
                         beforeImg.style.height = height;
@@ -79,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 var tl = new gsap.timeline();
                 const mediaImg = document.querySelector('.top_media')
                 console.log(tl)
-                mediaImg.style.height = '100%'
                 tl.from(mediaImg, 4, {autoAlpha: 0}, 1).to(mediaImg, 2, {autoAlpha: 1}, 2)
                 
                 var repeatLight = new gsap.timeline()

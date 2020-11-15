@@ -80,9 +80,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 const mediaImg = document.querySelector('.top_media')
                 console.log(tl)
                 mediaImg.style.height = '100%'
-                tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 1}, 2)
-                // beforeImg.className = 'img-fluid'
+                tl.from(mediaImg, 4, {autoAlpha: 0}, 1).to(mediaImg, 2, {autoAlpha: 1}, 2)
+                
+                var repeatLight = new gsap.timeline()
+                setTimeout(() => {
+                   repeatLight.to(mediaImg, 2, {autoAlpha: 0.6, repeat: -1, yoyo: true, ease: Linear.easeNone})
+                }, 4000)
+
+
+                gsap.to(mediaImg, {autoAlpha: 1, scrollTrigger: '.solution', onComplete: () => {
+                    repeatLight.pause();
+                }})
                 document.querySelector('.primary__media--wrap').appendChild(beforeImg)
+
+                
 
                 document.querySelector('.line-05').style.height = 0;
                 document.querySelector('.line-05').style.width = 0;

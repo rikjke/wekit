@@ -81,9 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 var tl = new gsap.timeline();
                 const mediaImg = document.querySelector('.top_media')
-                console.log(tl)
-                tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 1}, 2)
-                
+                tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 0.9}, 2)
                 var repeatLight = new gsap.timeline()
                 setTimeout(() => {
                    repeatLight.to(mediaImg, 2, {opacity: 0.6, repeat: -1, yoyo: true, ease: Linear.easeNone})

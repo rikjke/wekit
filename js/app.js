@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (innerWidth >= 1230) {
             if (window.pageYOffset > sticky) {
                 header.style.position = 'fixed';
-                header.style.backgroundColor = '#043b94';
+                header.style.backgroundColor = '#360A6F';
                 logo.style.visibility = 'hidden'
                 header.style.padding = 0;
             } else {

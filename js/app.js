@@ -77,22 +77,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 })
 
+                document.querySelector('.primary__media--wrap').prepend(beforeImg)
 
                 var tl = new gsap.timeline();
                 const mediaImg = document.querySelector('.top_media')
                 console.log(tl)
-                tl.from(mediaImg, 4, {autoAlpha: 0}, 1).to(mediaImg, 2, {autoAlpha: 1}, 2)
+                tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 1}, 2)
                 
                 var repeatLight = new gsap.timeline()
                 setTimeout(() => {
-                   repeatLight.to(mediaImg, 2, {autoAlpha: 0.6, repeat: -1, yoyo: true, ease: Linear.easeNone})
+                   repeatLight.to(mediaImg, 2, {opacity: 0.6, repeat: -1, yoyo: true, ease: Linear.easeNone})
                 }, 4000)
 
 
-                gsap.to(mediaImg, {autoAlpha: 1, scrollTrigger: '.solution', onComplete: () => {
+                gsap.to(mediaImg, {opacity: 1, scrollTrigger: '.solution', onComplete: () => {
                     repeatLight.pause();
                 }})
-                document.querySelector('.primary__media--wrap').appendChild(beforeImg)
 
                 
 

@@ -53,10 +53,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 var height = document.querySelector('.top_media').style.height;
                 console.log(width, height)
                 beforeImg.style.position = "absolute";
-                if (innerWidth < 1800) {
-                    beforeImg.style.top = '32px'
+                if (innerWidth < 1800 && innerWidth >= 1230) {
+                    // beforeImg.style.top = '32px'
                     beforeImg.style.width = '1271px'
 
+                } else if (innerWidth < 1230) {
+                    beforeImg.style.display = 'none'
                 } else {
                     beforeImg.style.width = width;
                     beforeImg.style.height = height;
@@ -65,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.addEventListener('resize', () => {
                     console.log('resize')
                     if (innerWidth < 1800 && innerWidth >= 1230) {
-                        beforeImg.style.top = '32px'
+                        // beforeImg.style.top = '32px'
                         beforeImg.style.width = '1271px'
     
                     } else if (innerWidth < 1230) {

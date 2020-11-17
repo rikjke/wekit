@@ -1355,6 +1355,11 @@ body {
   max-width: 100%;
 }
 
+.loading {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .main {
   max-width: 100%;
   overflow: hidden;

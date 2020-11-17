@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gsap.registerPlugin(ScrollTrigger);
     var state = '';
-    if (innerWidth >= 1230) {document.querySelector('.page').style.opacity = 0}
     function animations() {
         fixedHeader()
         var newState = state;
@@ -166,7 +165,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.to(CSSRulePlugin.getRule('.line-27:after'), {width: 0, duration: 0})
 
 
-                gsap.to('.page', {opacity: 1, duration: 1})
+                // gsap.to('.loading', {opacity: 1, visibility: 'visible', duration: 1})
+
+                document.getElementById('body').classList.remove('loading')
 
                 gsap.fromTo('.primary__bg', {height: 0, overflow: 'hidden'}, {height: 'auto', ease: "slow",duration: 2})
                 gsap.from(['.primary__button', '.btn-scroll', '.header__logo'], {opacity: 0, duration: 1})

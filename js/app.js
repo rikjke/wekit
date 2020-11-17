@@ -377,6 +377,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (window.pageYOffset > sticky) {
                 header.style.position = 'fixed';
                 header.style.backgroundColor = '#360A6F';
+                header.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)'
                 header.style.padding = '6px 0';
                 logoWrapper.style.height = '40px'
                 if (innerWidth > 1024) {
@@ -392,6 +393,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 logoImg.src = 'img/logo.svg'
                 logoWrapper.style.display = 'block'
                 logoWrapper.style.height = logoWrapperHeight
+                header.style.boxShadow = 'none'
             }
     }
 

@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.to(CSSRulePlugin.getRule('.line-10::after'), {height: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-10::before'), {width: 0, duration: 0})
 
-                // gsap.to(CSSRulePlugin.getRule('.line-10::before'), {width: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-13::after'), {width: 0, duration: 0})
                 gsap.to(CSSRulePlugin.getRule('.line-13::after'), {height: 0, duration: 0})
 
@@ -187,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.from('.mirage__text', {scrollTrigger:'.mirage__wrap', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)"})
 
                 gsap.from('.community__header', {scrollTrigger:'.community__header', y: 45, duration: 1, ease: "slow(0.7, 0.7, false)"})
-                // gsap.from('.community', {y: 70, scrollTrigger: '.community', duration: 1, ease: 'slow(0.7, 0.7, false)'})
                 gsap.from('.community__text', {scrollTrigger:'.community__header', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)", onComplete: () => {
                     gsap.to('.line-19', {height: '1730px', duration: 6, ease: 'slow(0.7, 0.7, false', onComplete: () => {
                         gsap.to('.line-20', {width: '50px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: () => {
@@ -250,7 +248,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.from('.touch__content--header', {scrollTrigger:'.touch__content', y: 45, duration: 1, ease: "slow(0.7, 0.7, false)"})
                 gsap.from('.touch__content--text', {scrollTrigger:'.touch__content', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)"})
 
-                // // gsap.from('.technologies__list li:nth-child(1)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -30, duration: 1.5, ease: "slow(0.7, 0.7, false"})
                 gsap.from('.technologies__list li:nth-child(2)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -80, duration: 2, ease: "slow(0.7, 0.7, false"})
                 gsap.from('.technologies__list li:nth-child(3)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -80, duration: 2, ease: "slow(0.7, 0.7, false"})
                 gsap.from('.technologies__bottom', {scrollTrigger:'.technologies__list:nth-child(2)', y: -160, duration: 2, ease: "slow(0.7, 0.7, false"})
@@ -301,14 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }})
 
                 
-    // function line8 () {
-    //     gsap.fromTo(CSSRulePlugin.getRule('.line-08::before'), {width: 0, height: 0}, {width: '10px', height: '10px', duration: 0})
-    //     gsap.fromTo('.line-09', {width: '0', height: 0}, {width: '597px', height: '105px', duration: 0, onComplete: () {
-    // }})
-                
-    //      gsap.fromTo(CSSRulePlugin.getRule('.line-09::after'), {width: 0, height: 0}, {width: '7px', height: '7px', duration: 0})
 
-    // }
                
 
                 gsap.from('.line-06', {height: 0, duration: 3, ease: 'slow(0.7, 0.7, false)'})
@@ -379,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 header.style.backgroundColor = '#360A6F';
                 header.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)'
                 header.style.padding = '6px 0';
-                logoWrapper.style.height = '40px'
+                gsap.to(logoWrapper, {height: '40px', duration: .3, ease: 'ease'})
                 if (innerWidth > 1024) {
                     logoImg.src = 'img/logo-menu.svg'
                     logoWrapper.style.display = 'block'
@@ -392,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 header.style.padding = '46px 0'
                 logoImg.src = 'img/logo.svg'
                 logoWrapper.style.display = 'block'
-                logoWrapper.style.height = logoWrapperHeight
+                gsap.to(logoWrapper, {height: logoWrapperHeight, duration: .3, ease: 'ease'})
                 header.style.boxShadow = 'none'
             }
     }
@@ -400,10 +390,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onscroll = () => fixedHeader();
     window.addEventListener("resize", fixedHeader)
 
-    // function line4 () {
-    //     gsap.to('.line-04', {height: '15px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: line5})
 
-    // }
 
     function line5 () {
         gsap.to('.line-05', {height: '175px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: () => {gsap.to('.line-05', {width: '15px', duration: 0.5,  ease: 'slow(0.7, 0.7, false)'})

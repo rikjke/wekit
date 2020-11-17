@@ -52,10 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 beforeImg.src = 'img/top_media-before.svg'
                 var width = document.querySelector('.top_media').style.width;
                 var height = document.querySelector('.top_media').style.height;
-                console.log(width, height)
                 beforeImg.style.position = "absolute";
                 if (innerWidth < 1800 && innerWidth >= 1230) {
-                    // beforeImg.style.top = '32px'
                     beforeImg.style.width = '1271px'
 
                 } else if (innerWidth < 1230) {
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 window.addEventListener('resize', () => {
                     if (innerWidth < 1800 && innerWidth >= 1230) {
-                        // beforeImg.style.top = '32px'
                         beforeImg.style.width = '1271px'
     
                     } else if (innerWidth < 1230) {
@@ -363,7 +360,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var sticky = header.offsetTop;
     var logoWrapperHeight = logoWrapper.style.height
     function fixedHeader() {
-            console.log(innerWidth)
             if (window.pageYOffset > sticky) {
                 header.style.position = 'fixed';
                 header.style.backgroundColor = '#360A6F';

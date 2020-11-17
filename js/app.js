@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function() {
         state = newState;
     }
     document.addEventListener("resize", animations);
-    setTimeout(animations, 600)
+    setTimeout(animations, 300)
   
     
 

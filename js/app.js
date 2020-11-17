@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var state = '';
     if (innerWidth >= 1230) {document.querySelector('.page').style.opacity = 0}
     function animations() {
+        fixedHeader()
         var newState = state;
         if (innerWidth >= 1230) {
             newState = "big";
@@ -65,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     beforeImg.style.top = 0;
                 }
                 window.addEventListener('resize', () => {
-                    console.log('resize')
                     if (innerWidth < 1800 && innerWidth >= 1230) {
                         // beforeImg.style.top = '32px'
                         beforeImg.style.width = '1271px'
@@ -365,30 +365,38 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("resize", animations);
     setTimeout(animations, 600)
   
-
+    
 
     var header = document.querySelector(".header");
+    var logoWrapper = document.querySelector('.header__logo--image')
+    var logoImg = document.querySelector('.header__logo--image img')
     var sticky = header.offsetTop;
-    var logo = document.querySelector('.header__logo--image')
+    var logoWrapperHeight = logoWrapper.style.height
     function fixedHeader() {
-        if (innerWidth >= 1230) {
+            console.log(innerWidth)
             if (window.pageYOffset > sticky) {
                 header.style.position = 'fixed';
                 header.style.backgroundColor = '#360A6F';
-                logo.style.visibility = 'hidden'
-                header.style.padding = 0;
+                header.style.padding = '6px 0';
+                logoWrapper.style.height = '40px'
+                if (innerWidth > 1024) {
+                    logoImg.src = 'img/logo-menu.svg'
+                    logoWrapper.style.display = 'block'
+                } else {
+                    logoWrapper.style.display = 'none'
+                }
             } else {
                 header.style.position = 'absolute'
                 header.style.backgroundColor = 'transparent'
-                logo.style.visibility = 'visible'
                 header.style.padding = '46px 0'
+                logoImg.src = 'img/logo.svg'
+                logoWrapper.style.display = 'block'
+                logoWrapper.style.height = logoWrapperHeight
             }
-        }
     }
 
     window.onscroll = () => fixedHeader();
-
-
+    window.addEventListener("resize", fixedHeader)
 
     // function line4 () {
     //     gsap.to('.line-04', {height: '15px', duration: .5, ease: 'slow(0.7, 0.7, false)', onComplete: line5})

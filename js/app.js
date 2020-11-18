@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.to(CSSRulePlugin.getRule('.line-27:after'), {width: 0, duration: 0})
 
 
-                // gsap.to('.loading', {opacity: 1, visibility: 'visible', duration: 1})
+                gsap.to('.loading', {opacity: 1, visibility: 'visible', duration: 1})
 
                 document.getElementById('body').classList.remove('loading')
 
@@ -341,6 +341,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 // lines animation end
 
+            } else {
+
+                document.getElementById('body').classList.remove('loading')
             }
         }
         state = newState;

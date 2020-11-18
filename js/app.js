@@ -343,6 +343,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             } else {
 
+                
                 document.getElementById('body').classList.remove('loading')
             }
         }

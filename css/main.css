@@ -1360,6 +1360,10 @@ body {
   visibility: hidden;
 }
 
+.header__wrap a {
+  text-decoration: none;
+}
+
 .modal {
   position: absolute;
   left: 0;

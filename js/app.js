@@ -241,9 +241,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.from('.touch__content--header', {scrollTrigger:'.touch__content', y: 45, duration: 1, ease: "slow(0.7, 0.7, false)"})
                 gsap.from('.touch__content--text', {scrollTrigger:'.touch__content', y: -100, duration: 1, ease: "slow(0.7, 0.7, false)"})
 
-                gsap.from('.technologies__list li:nth-child(2)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -80, duration: 2, ease: "slow(0.7, 0.7, false"})
-                gsap.from('.technologies__list li:nth-child(3)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -80, duration: 2, ease: "slow(0.7, 0.7, false"})
-                gsap.from('.technologies__bottom', {scrollTrigger:'.technologies__list:nth-child(2)', y: -160, duration: 2, ease: "slow(0.7, 0.7, false"})
+
+                gsap.from('.technologies__list li:nth-child(1)', {scrollTrigger:'.technologies__list li:nth-child(1)', y: -75, duration: 2, ease: "slow(0.7, 0.7, false"})
+                gsap.from('.technologies__list li:nth-child(2)', {scrollTrigger:'.technologies__list li:nth-child(2)', y: -75, duration: 2, ease: "slow(0.7, 0.7, false"})
+                gsap.from('.technologies__list li:nth-child(3)', {scrollTrigger:'.technologies__list li:nth-child(3)', y: -75, duration: 2, ease: "slow(0.7, 0.7, false"})
+                gsap.from('.technologies__bottom', {scrollTrigger:'.technologies__bottom', y: -100, duration: 2, ease: "slow(0.7, 0.7, false"})
 
                 gsap.from('.mirage__list li:nth-child(1)', {scrollTrigger:'.mirage__list li:nth-child(1)', y: 60, duration: 1, ease: "slow(0.7, 0.7, false"})
                 gsap.from('.mirage__list li:nth-child(2)', {scrollTrigger:'.mirage__list li:nth-child(2)', y: 60, duration: 1, ease: "slow(0.7, 0.7, false"})
@@ -270,7 +272,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 gsap.from('.savings__header', {scrollTrigger:'.savings__grid', y: -30, duration: 2, ease: "slow(0.7, 0.7, false"})
 
-                gsap.from('.target__item--elem', {scrollTrigger:'.target__item--elem', y: -50, duration: 1, ease: "slow(0.7, 0.7, false"})
+                gsap.from('.elem-one', {scrollTrigger:'.elem-one', y: -50, duration: 1, ease: "slow(0.7, 0.7, false"})
+                gsap.from('.elem-two', {scrollTrigger:'.elem-two', y: -50, duration: 1, ease: "slow(0.7, 0.7, false"})
 
                 gsap.from('.touch', {scrollTrigger:'.touch', y: 100, duration: 1, ease: "slow(0.7, 0.7, false"})
                 gsap.from('.mirage__bg', {scrollTrigger:'.mirage__text', y: -75, duration: 2, ease: "slow(0.7, 0.7, false"})

@@ -18,19 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     
-    let anchors = document.querySelectorAll('.btn-scroll')
-    for (let anchor of anchors) {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault()
-            
-            let blockID = anchor.getAttribute('href').substr(1)
-            
-            document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-            })
-        })
-    }
+
+    var scroll = new SmoothScroll('a[href*="#"]' , {
+        speed: 1500,
+        speedAsDuration: true,
+        header: '[data-scroll-header]',
+    });
+
+
     
 
     gsap.registerPlugin(ScrollTrigger);
@@ -410,6 +405,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    var formButton = document.getElementById('form-submit');
+
+    formButton.addEventListener('click', () => {
+        console.log('111')
+        document.querySelector('.modal').style.transform = 'scale(1)'
+    })
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        document.querySelector('.modal').style.transform = 'scale(0)'
+    })
 
 
 });

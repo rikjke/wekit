@@ -20,7 +20,7 @@
 
         <div class="page">
 
-            <header class="header">
+            <header data-scroll-header class="header">
                 <div class="container">
                     <div class="header__wrap">
                         <div class="header__logo">
@@ -59,7 +59,7 @@
                                 <div class="primary__header">Groundbreaking new XR platform that takes holographic training to the next level</div>
                                 <div class="primary__text">Get access to expert knowledge faster, better, and more engaging than ever before</div>
                                 <div class="primary__button">
-                                    <a href="#technologies" class="btn btn-scroll">GET STARTED</a>
+                                    <a href="#technologies-row" class="btn btn-scroll">GET STARTED</a>
                                 </div>
                             </div>
                             <div class="primary__media">
@@ -73,7 +73,7 @@
                         </div>
     
                         <div class="technologies" id="technologies">
-                            <div class="technologies__row">
+                            <div id="technologies-row" class="technologies__row">
                                 <div class="technologies__content">
                                     <div class="technologies__header">Disrupting Learning Technologies</div>
                                     <div class="technologies__text">WEKIT ECS is a dynamic start-up company with more than 100 years of combined learning technology experience bringing together established XR experts, computer scientists, business specialists, and design technologists. We are passionate about our advanced XR training solutions that provide economic and social benefits.</div>        
@@ -418,9 +418,17 @@
                                     </div>
                                 </div>
                                 <div class="touch__form--button">
-                                    <button type="submit" class="btn btn-md">SUBMIT</button>
+                                    <button id="form-submit" type="submit" class="btn btn-md">SUBMIT</button>
                                 </div>
                                 <div class="touch__form--text">By clicking "submit" above, you consent to allow mytraffic to store and process the personal information submitted above and agree to our terms and conditions as well as our Privacy Policy.</div>
+                            </div>
+
+                            
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <h2>Thank you!</h2>
+                                    <img class="close-btn" src="img/close.svg" alt="close">
+                                </div>
                             </div>
                         </div>
     
@@ -454,6 +462,8 @@
                             <div class="footer__pattern">
                                 <img src="img/footer__pattern.svg" class="img-fluid" alt="">
                             </div>
+
+
                         </footer>
                     </div>
              
@@ -661,6 +671,7 @@
                 </div>
             </div>
 
+
         </div>
 
         <script src="js/libs.min.js"></script>
@@ -668,6 +679,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>	
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
 
 
     </body>

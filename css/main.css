@@ -1360,6 +1360,49 @@ body {
   visibility: hidden;
 }
 
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.modal-active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  padding: 45px 0;
+  background: #ffffff;
+  text-align: center;
+  color: #360A6F;
+  border-radius: 15px 0px 15px 0px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
 .main {
   max-width: 100%;
   overflow: hidden;

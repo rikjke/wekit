@@ -343,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             } else {
 
-                
+                console.log('mobile')
                 document.getElementById('body').classList.remove('loading')
             }
         }

@@ -381,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var logoImg = document.querySelector('.header__logo--image img')
     var sticky = header.offsetTop;
     var logoWrapperHeight = logoWrapper.style.height
+    var headerPadding = header.style.padding;
     function fixedHeader() {
             if (window.pageYOffset > sticky) {
                 header.style.position = 'fixed';
@@ -397,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 header.style.position = 'absolute'
                 header.style.backgroundColor = 'transparent'
-                header.style.padding = '46px 0'
+                header.style.padding = headerPadding;
                 logoImg.src = 'img/logo.svg'
                 logoWrapper.style.display = 'block'
                 gsap.to(logoWrapper, {height: logoWrapperHeight, duration: .3, ease: 'ease'})

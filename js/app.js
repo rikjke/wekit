@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
         header: '[data-scroll-header]',
     });
 
+    var getstartedScroll = new SmoothScroll('a[href="#technologies-row"]', {
+        speed: 2000,
+        speedAsDuration: true,
+        header: '[data-scroll-header]',
+        ease: 'easeOutCubic',
+    })
+
 
     
 

@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 
+    
     gsap.registerPlugin(ScrollTrigger);
     var state = '';
     function animations() {

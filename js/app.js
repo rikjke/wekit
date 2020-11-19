@@ -25,17 +25,29 @@ document.addEventListener("DOMContentLoaded", function() {
         header: '[data-scroll-header]',
     });
 
-    // var getstartedScroll = new SmoothScroll('a[href="#technologies-row"]', {
-    //     speed: 1500,
-    //     speedAsDuration: true,
-    //     header: '[data-scroll-header]',
-    //     ease: 'easeOutQuint',
-    // })
+
+    // let anchors = document.querySelectorAll('.btn-scroll')
+    // for (let anchor of anchors) {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault()
+            
+    //         let blockID = anchor.getAttribute('href').substr(1)
+            
+    //         document.getElementById(blockID).scrollIntoView({
+    //         behavior: 'smooth',
+    //         block: 'end'
+    //         })
+    //     })
+    // }
+
+    var getstartedScroll = new SmoothScroll('a[href*="#technologies-row"]', {
+        speed: 1500,
+        speedAsDuration: true,
+        header: '[data-scroll-header]',
+        ease: 'easeOutQuint',
+    })
 
 
-    
-
-    
     gsap.registerPlugin(ScrollTrigger);
     var state = '';
     function animations() {

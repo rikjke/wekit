@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 var tl = new gsap.timeline();
                 const mediaImg = document.querySelector('.top_media')
+                mediaImg.style.position = 'relative'
                 tl.from(mediaImg, 4, {opacity: 0}, 1).to(mediaImg, 2, {opacity: 0.9}, 2)
                 var repeatLight = new gsap.timeline()
                 setTimeout(() => {

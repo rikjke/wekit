@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //     })
     // }
 
-    var getstartedScroll = new SmoothScroll('a[href*="#technologies-row"]', {
+    var getstartedScroll = new SmoothScroll('a[href*="#technologies"]', {
         speed: 1500,
         speedAsDuration: true,
         header: '[data-scroll-header]',

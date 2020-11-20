@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.page').toggleClass('nav-open');
     });
 
-    $('.header__nav--item').on("click", function (e) {
+    $('.header__nav--item a').on("click", function (e) {
         e.preventDefault();
         $('.page').removeClass('nav-open');
 
@@ -19,12 +19,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
 
+
+
     var scroll = new SmoothScroll('a[href*="#"]' , {
         speed: 1500,
         speedAsDuration: true,
         header: '[data-scroll-header]',
     });
 
+    
+    var getstartedScroll = new SmoothScroll('a[href*="#technologies"]', {
+        speed: 1500,
+        speedAsDuration: true,
+        header: '[data-scroll-header]',
+        ease: 'easeOutQuint',
+    })
 
     // let anchors = document.querySelectorAll('.btn-scroll')
     // for (let anchor of anchors) {
@@ -40,12 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //     })
     // }
 
-    var getstartedScroll = new SmoothScroll('a[href*="#technologies"]', {
-        speed: 1500,
-        speedAsDuration: true,
-        header: '[data-scroll-header]',
-        ease: 'easeOutQuint',
-    })
+
 
 
     gsap.registerPlugin(ScrollTrigger);
